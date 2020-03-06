@@ -1,0 +1,15 @@
+@import "layout/_fonts.scss";
+@import "layout/_normalize.scss";
+@import "layout/_base.scss";
+@import "layout/_variables.scss";
+@import "layout/_mixins.scss";
+
+/*BLOCKS*/
+@import "blocks/banner";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/btn";
+@import "blocks/dots-navigation";
+@import "blocks/arrow-scroll";
+@import "blocks/the-best";
+@import "blocks/reviews";

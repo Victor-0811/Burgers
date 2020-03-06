@@ -1,0 +1,46 @@
+.banner {
+
+    &__bg {
+        background: url("../images/Rectangle\ 11.jpg") center center / cover no-repeat;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    &__block {
+        display: flex;
+        padding: 59px 0 0 24px;
+    }
+
+    &__icon {
+        position: absolute;
+    }
+
+    &__item {
+        width: 50%;
+
+        &--pad {
+            padding-top: 78px;
+        }
+    }
+
+    &__burger {
+        position: absolute;
+        left: 37px;
+        top: -66px;
+    }
+
+    &__title {
+        font-size: px-to-rem(72px);
+        font-family: "Gagalin";
+        color: rgb(249, 180, 59);
+        line-height: 1;
+    }
+
+    &__subtitle {
+        font-size: px-to-rem(65px);
+        font-family: 'lifehack';
+        color: #fff;
+        font-weight: 500;
+    }
+}

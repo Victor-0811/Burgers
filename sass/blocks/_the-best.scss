@@ -1,0 +1,52 @@
+.the-best {
+
+    &__bg {
+        background: url("../images/the-best-bg.jpg")center center / cover no-repeat;
+        height: 100%;
+    }
+
+    .container {
+        padding: 112px 0;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        flex: 33.3333%;
+        flex-wrap: wrap;
+        padding: 5px;
+        @include flex-column;
+        text-align: center;
+    }
+
+    &__icon {
+        margin-bottom: 27px;
+        display: block;
+
+        &--margin {
+            margin-bottom: 35px;
+        }
+    }
+
+    &__subtitle {
+        font-size: px-to-rem(24px);
+        font-family: "Lifehack";
+        color: #4b4c4e;
+        line-height: 1.167;
+        margin-bottom: 13px;
+    }
+
+    &__descr {
+        font-size: px-to-rem(14px);
+        font-family: "Ubuntu";
+        color: #adaaa7;
+        line-height: 1.714;
+    }
+}
+
+.title {
+    @include title;
+}

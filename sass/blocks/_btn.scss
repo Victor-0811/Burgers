@@ -1,0 +1,13 @@
+.btn {
+    font-size: px-to-rem(13px);
+    font-family: "Ubuntu";
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #e45028;
+    padding: 10px 16px;
+    border-radius: 5px;
+
+    &--reviews {
+        background-color: #2f3234;
+    }
+}
