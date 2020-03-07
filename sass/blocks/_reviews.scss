@@ -1,10 +1,5 @@
 .reviews {
 
-    &__content {
-        width: 100%;
-        height: 100%;
-    }
-
     &__list {
         width: 100%;
         height: 100%;
@@ -17,40 +12,48 @@
         height: 50%;
         position: relative;
         cursor: pointer;
-
-        .block {
-            position: absolute;
-            top: 15%;
-            color: #fff;
-            font-size: px-to-rem(14px);
-            padding-left: 25px;
-            transform: scale(0);
-            transition: .5s;
-
-            &__title {
-                font-family: 'gagalin';
-                font-weight: 400;
-                margin-bottom: 20px;
-            }
-
-            &__descr {
-                font-family: 'ubuntu';
-                font-weight: 300;
-                line-height: 1.714;
-                padding-right: 110px;
-                margin-bottom: 20px;
-            }
-        }
-
-        &:hover .block {
-            transform: scale(1);
-        }
     }
 
-
     &__img {
+        display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    &__block {
+        position: absolute;
+        top: 15%;
+        color: #fff;
+        font-size: px-to-rem(14px);
+        padding-left: 25px;
+        opacity: 0;
+        transform: scale(0);
+        transition: .5s;
+    }
+
+    &__title {
+        font-family: 'gagalin';
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    &__descr {
+        p {
+            font-family: 'ubuntu';
+            font-weight: 300;
+            line-height: 1.714;
+            padding-right: 110px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.reviews__item {
+    &:hover {
+        .reviews__block {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
 }

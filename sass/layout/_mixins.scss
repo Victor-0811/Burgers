@@ -23,15 +23,6 @@
 }
 
 
-@mixin title {
-    font-size: px-to-rem(71.713px);
-    font-family: "Gagalin";
-    color: rgb(47, 50, 52);
-    line-height: 0.889;
-    text-align: center;
-    margin-bottom: 83px;
-}
-
 @function px-to-rem($size, $basicSize: 16px) {
     @return $size / $basicSize#{rem};
 }

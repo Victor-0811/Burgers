@@ -1,0 +1,25 @@
+.hero {
+    background: url("../images/Rectangle\ 11.jpg") center center / cover no-repeat;
+
+    &__block {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        width: 50%;
+    }
+
+    &__text {
+        padding-top: 90px;
+        width: 50%;
+    }
+
+    &__subtitle {
+        font-size: px-to-rem(65px);
+        font-family: 'lifehack';
+        color: #fff;
+        font-weight: 500;
+    }
+
+}
