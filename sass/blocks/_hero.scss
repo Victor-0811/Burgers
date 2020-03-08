@@ -1,9 +1,15 @@
 .hero {
     background: url("../images/Rectangle\ 11.jpg") center center / cover no-repeat;
 
-    &__block {
+    &__container {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__block {
+        flex: .8;
+        @include flex-center;
     }
 
     &__item {
@@ -11,7 +17,6 @@
     }
 
     &__text {
-        padding-top: 90px;
         width: 50%;
     }
 

@@ -417,6 +417,7 @@ h6 {
 button {
   border: none;
   background: transparent;
+  outline: none;
   cursor: pointer;
 }
 
@@ -448,6 +449,7 @@ body {
   font-family: "Gagalin";
   color: #f9b43b;
   line-height: 1;
+  margin-top: 85px;
 }
 
 .section__title--center {
@@ -455,16 +457,38 @@ body {
   line-height: 0.889;
   text-align: center;
   margin-bottom: 83px;
+  margin-top: 0;
+}
+
+.logo__link {
+  display: block;
 }
 
 .hero {
   background: url("../images/Rectangle 11.jpg") center center/cover no-repeat;
 }
 
-.hero__block {
+.hero__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.hero__block {
+  -webkit-box-flex: .8;
+      -ms-flex: .8;
+          flex: .8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -475,7 +499,6 @@ body {
 }
 
 .hero__text {
-  padding-top: 90px;
   width: 50%;
 }
 
@@ -500,8 +523,7 @@ body {
 }
 
 .menu {
-  width: 77%;
-  padding-left: 57px;
+  margin-left: auto;
 }
 
 .menu__list {
@@ -516,6 +538,37 @@ body {
           align-items: center;
 }
 
+.menu__item {
+  margin-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__item:first-child {
+  margin-left: 0;
+}
+
+.menu__item:after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-left: 15px;
+}
+
+.menu__item--none:after {
+  display: none;
+}
+
 .menu__link {
   color: #fff;
   font-size: 0.8125rem;
@@ -527,23 +580,6 @@ body {
   display: block;
 }
 
-.menu__link:after {
-  content: "";
-  display: inline-block;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: #fff;
-  margin-left: 15px;
-}
-
-.menu__link--none:after {
-  display: none;
-}
-
 .btn {
   font-size: 0.8125rem;
   font-family: "Ubuntu";
@@ -552,10 +588,12 @@ body {
   background-color: #e45028;
   padding: 10px 16px;
   border-radius: 5px;
+  margin-left: 20px;
 }
 
 .btn--reviews {
   background-color: #2f3234;
+  margin-left: 0;
 }
 
 .dots-navigation {
@@ -577,6 +615,20 @@ body {
   margin-bottom: 15px;
   position: relative;
   cursor: pointer;
+}
+
+.dots-navigation__item:hover:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #fff;
 }
 
 .dots-navigation__item:last-child {
@@ -603,6 +655,10 @@ body {
   right: 48.5%;
   -webkit-transform: translateY(-48.5%);
           transform: translateY(-48.5%);
+}
+
+.arrow-scroll__link {
+  display: block;
 }
 
 .the-best {
@@ -696,7 +752,7 @@ body {
   top: 15%;
   color: #fff;
   font-size: 0.875rem;
-  padding-left: 25px;
+  padding: 0 45px;
   opacity: 0;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -714,8 +770,7 @@ body {
   font-family: 'ubuntu';
   font-weight: 300;
   line-height: 1.714;
-  padding-right: 110px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .reviews__item:hover .reviews__block {

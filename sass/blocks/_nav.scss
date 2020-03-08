@@ -1,26 +1,21 @@
 .menu {
-    width: 77%;
-    padding-left: 57px;
+    margin-left: auto;
 
     &__list {
         @include flex-between;
     }
 
-    &__link {
-        color: #fff;
-        font-size: px-to-rem(13px);
-        text-transform: uppercase;
-        line-height: 2.308;
-        font-family: 'ubuntu';
-        font-weight: 500;
-        position: relative;
-        display: block;
+    &__item {
+        margin-left: 15px;
+        @include flex-center;
+
+        &:first-child {
+            margin-left: 0;
+        }
 
         &:after {
             content: "";
             display: inline-block;
-            top: 50%;
-            transform: translateY(-50%);
             width: 4px;
             height: 4px;
             border-radius: 50%;
@@ -33,6 +28,17 @@
                 display: none;
             }
         }
+    }
+
+    &__link {
+        color: #fff;
+        font-size: px-to-rem(13px);
+        text-transform: uppercase;
+        line-height: 2.308;
+        font-family: 'ubuntu';
+        font-weight: 500;
+        position: relative;
+        display: block;
 
     }
 }
