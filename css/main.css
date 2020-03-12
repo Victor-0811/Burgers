@@ -981,7 +981,7 @@ body {
 }
 
 .delivery {
-  background: url("../../images/form/bg-texture.png") center center/cover no-repeat;
+  background: url("../images/form/bg-texture.png") center center/cover no-repeat;
 }
 
 .delivery__container {
