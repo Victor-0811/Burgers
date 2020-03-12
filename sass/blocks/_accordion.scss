@@ -1,0 +1,155 @@
+.accordion {
+    &__name {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 14px;
+        position: relative;
+        cursor: pointer;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 8px solid #f9b43b;
+            margin-right: 14px;
+        }
+
+    }
+
+    &__active-block {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        font-family: 'ubuntu';
+        padding: 0 0 0 20px;
+        margin-bottom: 20px;
+        height: 0;
+        overflow: hidden;
+    }
+
+    &__images {
+        margin-right: 20px;
+    }
+
+    &__avatar {
+        width: 105px;
+        height: 105px;
+        border-radius: 50%;
+        overflow: hidden;
+
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-weight: 700;
+        margin-bottom: 18px;
+    }
+
+    &__descr {
+        font-weight: 300;
+        line-height: 1.714;
+    }
+}
+
+.accordion__item--active .accordion__active-block {
+    height: 100%;
+}
+
+.accordion__item--active .accordion__name {
+    color: #f9b43b;
+}
+
+.accordion__item--active .accordion__name:before {
+    transform: rotate(180deg);
+}
+
+
+
+.accordion--horisontal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+
+    &:before {
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.288);
+    }
+}
+
+.accordion--horisontal .accordion__list {
+    display: flex;
+    height: 100%;
+}
+
+.accordion--horisontal .accordion__item {
+    display: flex;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.accordion--horisontal .accordion__bg {
+    background: url("../../images/menu/menu-burger1.jpg") center center / cover no-repeat;
+    width: 80px;
+}
+
+.accordion--horisontal .accordion__name {
+    z-index: 9;
+    font-size: px-to-rem(40px);
+    font-family: "Gagalin";
+    line-height: 1.601;
+    margin: 0;
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+
+    &:before {
+        display: none;
+    }
+}
+
+.accordion--horisontal .accordion__active-block {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.432);
+    height: 100%;
+    padding: 0px;
+    margin: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.accordion--horisontal .accordion__text {
+    text-align: left;
+    margin: 0;
+    padding: 80px 60px 0 60px;
+    z-index: 9;
+}
+
+.accordion--horisontal .accordion__item--active .accordion__active-block {
+    width: 700px;
+    position: relative;
+}
+
+.accordion--horisontal .accordion__active-block--active .accordion__name {
+    color: rgb(249, 180, 59);
+}

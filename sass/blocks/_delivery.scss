@@ -1,0 +1,10 @@
+.delivery {
+    background: url("../../images/form/bg-texture.png")center center/cover no-repeat;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

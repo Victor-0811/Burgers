@@ -1,0 +1,20 @@
+.team {
+    background: url("../images/command/command-bg.jpg") center top / cover no-repeat;
+    position: relative;
+
+    &__right-block {
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        background-color: #343739e7;
+        padding: 157px 0;
+    }
+
+    &__container {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+}

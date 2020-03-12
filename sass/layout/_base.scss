@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+}
+
 ul li {
     list-style: none;
 }
@@ -37,7 +41,6 @@ button {
 
 body {
     font-family: 'gagalin';
-    font-size: 16px;
 }
 
 .wrapper {
