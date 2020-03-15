@@ -1,58 +1,75 @@
-.reviews {
-
-    &__list {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    &__item {
-        width: 25%;
-        height: 50%;
-        position: relative;
-        cursor: pointer;
-    }
-
-    &__img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    &__block {
-        position: absolute;
-        top: 15%;
-        color: #fff;
-        font-size: px-to-rem(14px);
-        padding: 0 45px;
-        opacity: 0;
-        transform: scale(0);
-        transition: .5s;
-    }
-
-    &__title {
-        font-family: 'gagalin';
-        font-weight: 400;
-        margin-bottom: 20px;
-    }
-
-    &__descr {
-        p {
-            font-family: 'ubuntu';
-            font-weight: 300;
-            line-height: 1.714;
-            margin-bottom: 30px;
-        }
-    }
+.reviews__list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .reviews__item {
-    &:hover {
-        .reviews__block {
-            opacity: 1;
-            transform: scale(1);
-        }
+    width: 25%;
+    height: 50%;
+    position: relative;
+    cursor: pointer;
+
+    @include tablets {
+        width: 50%;
     }
+
+    @include phones {
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.reviews__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reviews__block {
+    position: absolute;
+    top: 15%;
+    color: #fff;
+    font-size: rem(14px);
+    padding: 0 11%;
+    opacity: 0;
+    transform: scale(0);
+    transition: .5s;
+
+    @include tablets {
+        text-align: center;
+    }
+
+    @include phones {
+        top: 35%;
+    }
+}
+
+.reviews__title {
+    font-family: 'gagalin';
+    font-weight: 400;
+    margin-bottom: 5%;
+
+    @include phones {
+        margin-bottom: 10%;
+    }
+}
+
+.reviews__descr p {
+    font-family: 'ubuntu';
+    font-weight: 300;
+    line-height: 1.714;
+    margin-bottom: 8%;
+
+    @include phones {
+        display: none;
+    }
+}
+
+.reviews__item:hover .reviews__block {
+    opacity: 1;
+    transform: scale(1);
 }

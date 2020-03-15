@@ -1,46 +1,85 @@
 .the-best {
     background: url("../images/the-best-bg.jpg")center center / cover no-repeat;
+}
 
-    .container {
-        padding: 112px 0;
+.the-best__container {
+    padding: 7.5% 0;
+}
+
+.the-best__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include phones {
+        flex-direction: column;
     }
+}
 
-    &__list {
-        display: flex;
-        justify-content: space-between;
+.the-best__item {
+    flex: 33.3333%;
+    flex-wrap: wrap;
+    padding: .4%;
+    @include flex-column;
+    text-align: center;
+
+    @include phones {
+        flex-direction: row;
+        margin-bottom: 6%;
     }
+}
 
-    &__item {
-        flex: 33.3333%;
-        flex-wrap: wrap;
-        padding: 5px;
-        @include flex-column;
-        text-align: center;
+.the-best__icon {
+    margin-bottom: 5%;
+    display: block;
+    width: rem(100px);
+    height: rem(100px);
+}
+
+.the-best__text {
+    @include phones {
+        flex: 1;
     }
+}
 
-    &__icon {
-        margin-bottom: 27px;
-        display: block;
+.the-best-chiken {
+    width: rem(100px);
+    height: rem(100px);
 
-        &--margin {
-            margin-bottom: 35px;
-        }
+    @include phones {
+        width: rem(90px);
+        height: rem(90px);
     }
+}
 
-    &__subtitle {
-        font-size: px-to-rem(24px);
-        font-family: "Lifehack";
-        color: #4b4c4e;
-        line-height: 1.167;
-        margin-bottom: 13px;
+.the-best-hand {
+    width: rem(73px);
+    height: rem(87px)
+}
+
+.the-best-natural {
+    width: rem(84px);
+    height: rem(77px);
+}
+
+.the-best__subtitle {
+    font-size: rem(24px);
+    font-family: "Lifehack";
+    color: #4b4c4e;
+    line-height: 1.167;
+    margin-bottom: 5%;
+
+    @include phones {
+        font-size: rem(20px);
     }
+}
 
-    &__descr {
-        p {
-            font-size: px-to-rem(14px);
-            font-family: "Ubuntu";
-            color: #adaaa7;
-            line-height: 1.714;
-        }
+.the-best__descr p {
+    font-size: rem(14px);
+    font-family: "Ubuntu";
+    color: #adaaa7;
+    line-height: 1.714;
+
+    @include phones {
+        font-size: rem(13px);
     }
 }

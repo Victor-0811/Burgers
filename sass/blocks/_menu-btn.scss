@@ -1,0 +1,35 @@
+.menu-btn {
+    width: rem(25px);
+    height: rem(25px);
+    margin-left: 4%;
+    position: relative;
+    @include flex-center;
+    display: none;
+
+    @include tablets {
+        display: flex;
+    }
+}
+
+.menu-btn__line,
+.menu-btn__line:before,
+.menu-btn__line:after {
+    position: absolute;
+    width: rem(25px);
+    height: rem(2px);
+    border-radius: rem(20px);
+    background-color: #fff;
+}
+
+.menu-btn__line:before,
+.menu-btn__line:after {
+    content: "";
+}
+
+.menu-btn__line:before {
+    transform: translateY(-7px);
+}
+
+.menu-btn__line::after {
+    transform: translateY(7px);
+}

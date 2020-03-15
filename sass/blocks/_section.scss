@@ -1,26 +1,53 @@
 .section {
     height: 100vh;
-    min-height: 650px;
+    min-height: rem(650px);
     position: relative;
+}
 
-    &__title {
-        font-size: px-to-rem(72px);
-        font-family: "Gagalin";
-        color: rgb(249, 180, 59);
-        line-height: 1;
-        margin-top: 85px;
+.section__title {
+    font-size: px-to-rem(72px);
+    font-family: "Gagalin";
+    color: rgb(249, 180, 59);
+    line-height: 1;
 
-        &--center {
-            color: rgb(47, 50, 52);
-            line-height: 0.889;
+    @include tablets {
+        font-size: px-to-rem(60px);
+    }
+
+    @include phones {
+        font-size: rem(45px);
+    }
+
+    &--center {
+        color: rgb(47, 50, 52);
+        line-height: 0.889;
+        text-align: center;
+        margin-bottom: 8.5%;
+        margin-top: 0;
+    }
+
+    &--team {
+        margin-top: 0;
+        margin-bottom: rem(40px);
+    }
+
+    &--menu {
+        position: absolute;
+        color: #fff;
+        left: 7%;
+        top: 7%;
+        margin: 0;
+    }
+
+    &--form {
+        margin-bottom: 7%;
+
+        @include phones {
+            font-size: rem(40px);
             text-align: center;
-            margin-bottom: 83px;
-            margin-top: 0;
-        }
-
-        &--team {
-            margin-top: 0;
-            margin-bottom: 40px;
+            margin-bottom: 7%;
         }
     }
+
+
 }

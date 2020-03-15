@@ -1,0 +1,56 @@
+.footer {
+    background: url("../images/footer-bg.jpg") center center / cover no-repeat;
+    padding: 0 16%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: rem(14px);
+    color: #fff;
+    font-family: 'ubuntu';
+    font-weight: 300;
+
+    @include tablets {
+        font-size: rem(13px);
+    }
+
+    @include phones {
+        font-size: rem(10px);
+    }
+}
+
+.footer .container {
+    @include flex-between;
+    padding: 1% 0;
+
+    @include phones {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.footer__link {
+    color: #e35028;
+    font-weight: 500;
+}
+
+.footer__address {
+    margin-bottom: 2%;
+}
+
+.footer__socials {
+    border: rem(2px) solid #fff;
+    width: rem(200px);
+    height: rem(50px);
+}
+
+.phone {
+    display: inline-flex;
+    align-items: center;
+}
+
+.phone__icon {
+    width: rem(15px);
+    height: rem(15px);
+    margin-top: 3%;
+}

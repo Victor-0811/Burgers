@@ -1,12 +1,15 @@
 .accordion {
-    &__name {
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
+    color: #fff;
+    padding: 0 4%;
+
+    .accordion__trigger {
+        color: #fff;
         font-weight: 400;
-        font-size: 14px;
+        font-size: rem(14px);
+        margin-bottom: 4%;
         position: relative;
-        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
 
         &:last-child {
             margin-bottom: 0;
@@ -14,54 +17,69 @@
 
         &::before {
             content: "";
+            position: absolute;
             display: block;
-            width: 0;
-            height: 0;
-            border-left: 4px solid transparent;
-            border-right: 4px solid transparent;
-            border-top: 8px solid #f9b43b;
-            margin-right: 14px;
+            border-left: rem(4px) solid transparent;
+            border-right: rem(4px) solid transparent;
+            border-top: rem(8px) solid #f9b43b;
+            margin-left: -18%
         }
 
     }
 
-    &__active-block {
+    .accordion__active-block {
         display: flex;
         justify-content: space-between;
-        font-size: 14px;
+        font-size: rem(14px);
         font-family: 'ubuntu';
-        padding: 0 0 0 20px;
-        margin-bottom: 20px;
+        margin-bottom: rem(20px);
         height: 0;
         overflow: hidden;
+
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0 22%;
+        }
     }
 
-    &__images {
-        margin-right: 20px;
+    .accordion__pic {
+        margin-right: rem(20px);
+
+        @include tablets {
+            margin: 0 0 3% 0;
+
+        }
     }
 
-    &__avatar {
-        width: 105px;
-        height: 105px;
+    .accordion__avatar {
+        width: rem(105px);
+        height: rem(105px);
         border-radius: 50%;
         overflow: hidden;
 
     }
 
-    &__img {
+    .accordion__img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    &__title {
+    .accordion__title {
         font-weight: 700;
-        margin-bottom: 18px;
+        margin-bottom: rem(18px);
     }
 
-    &__descr {
+    .accordion__descr {
         font-weight: 300;
         line-height: 1.714;
+        width: 64%;
+
+        @include tablets {
+            width: 100%;
+        }
     }
 }
 
@@ -69,37 +87,31 @@
     height: 100%;
 }
 
-.accordion__item--active .accordion__name {
+.accordion__item--active .accordion__trigger {
     color: #f9b43b;
 }
 
-.accordion__item--active .accordion__name:before {
+.accordion__item--active .accordion__trigger:before {
     transform: rotate(180deg);
 }
 
 
 
 .accordion--horisontal {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    color: #fff;
+    display: flex;
+    height: 100%;
+    position: relative;
+    padding: 0;
 
     &:before {
         content: "";
+        position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.288);
+        background-color: hsla(204, 5%, 19%, 0.849);
     }
-}
-
-.accordion--horisontal .accordion__list {
-    display: flex;
-    height: 100%;
 }
 
 .accordion--horisontal .accordion__item {
@@ -109,30 +121,52 @@
     overflow: hidden;
 }
 
-.accordion--horisontal .accordion__bg {
-    background: url("../images/menu/menu-burger1.jpg") center center / cover no-repeat;
-    width: 80px;
-}
+.accordion--horisontal .accordion__trigger {
+    display: block;
+    @include flex-center;
+    width: rem(80px);
+    margin-bottom: 0;
 
-.accordion--horisontal .accordion__name {
-    z-index: 9;
-    font-size: px-to-rem(40px);
-    font-family: "Gagalin";
-    line-height: 1.601;
-    margin: 0;
-    writing-mode: tb-rl;
-    transform: rotate(180deg);
+    @include phones {
+        width: rem(40px);
+    }
 
     &:before {
         display: none;
+    }
+
+    &--bg1 {
+        background: url("../images/menu/menu-burger1.jpg")center center / cover no-repeat;
+    }
+
+    &--bg2 {
+        background: url("../images/menu/dietary.jpg") center center / cover no-repeat;
+    }
+
+    &--bg3 {
+        background: url("../images/menu/vegetarian.jpg") center center / cover no-repeat;
+    }
+}
+
+.accordion--horisontal .accordion__title {
+    font-size: px-to-rem(40px);
+    color: #fff;
+    font-family: "Gagalin";
+    line-height: 1.601;
+    margin: 0;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    z-index: 9;
+
+    @include phones {
+        font-size: px-to-rem(30px);
     }
 }
 
 .accordion--horisontal .accordion__active-block {
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.432);
     height: 100%;
-    padding: 0px;
+    padding: rem(0px);
     margin: 0;
     width: 0;
     overflow: hidden;
@@ -141,15 +175,33 @@
 .accordion--horisontal .accordion__text {
     text-align: left;
     margin: 0;
-    padding: 80px 60px 0 60px;
+    padding: 10% 8%;
     z-index: 9;
+
+    @include phones {
+        padding: 5% 5%;
+    }
+}
+
+.accordion--horisontal .accordion__descr {
+    width: 100%;
+
+    @include phones {
+        font-size: rem(12px);
+    }
 }
 
 .accordion--horisontal .accordion__item--active .accordion__active-block {
-    width: 700px;
+    // width: rem(600px);
     position: relative;
+
+    @include phones {
+        // width: rem(200px);
+    }
 }
 
-.accordion--horisontal .accordion__active-block--active .accordion__name {
+.accordion--horisontal .accordion__item--active .accordion__title {
     color: rgb(249, 180, 59);
 }
+
+// background: linear-gradient(to bottom, #f9b33b 0%, #f2a23a 27%, #f19e39 64%, #ef9739 82%, #f9b33b 100%);

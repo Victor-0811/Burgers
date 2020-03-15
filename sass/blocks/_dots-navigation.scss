@@ -1,54 +1,58 @@
 .dots-navigation {
     position: absolute;
     right: 12%;
-    top: 95px;
+    top: rem(95px);
     z-index: 99;
 
-    &__list {
-        position: fixed;
+    @include tablets {
+        display: none;
+    }
+}
+
+.dots-navigation__list {
+    position: fixed;
+}
+
+.dots-navigation__item {
+    width: rem(6px);
+    height: rem(6px);
+    border-radius: 50%;
+    background-color: #fff;
+    margin-bottom: rem(15px);
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: rem(15px);
+            height: rem(15px);
+            border-radius: 50%;
+            border: rem(1px) solid #fff;
+        }
     }
 
-    &__item {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background-color: #fff;
-        margin-bottom: 15px;
-        position: relative;
-        cursor: pointer;
+    &:last-child {
+        margin: 0;
+    }
 
-        &:hover {
-            &:before {
-                content: "";
-                display: block;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 15px;
-                height: 15px;
-                border-radius: 50%;
-                border: 1px solid #fff;
-            }
-        }
-
-        &:last-child {
-            margin: 0;
-        }
-
-        &--active {
-            &:before {
-                content: "";
-                display: block;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 15px;
-                height: 15px;
-                border-radius: 50%;
-                border: 1px solid #fff;
-            }
+    &--active {
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: rem(15px);
+            height: rem(15px);
+            border-radius: 50%;
+            border: rem(1px) solid #fff;
         }
     }
 }

@@ -1,4 +1,6 @@
 .menu {
     background: url("../images/menu/menu-bg.jpg") center center / cover no-repeat;
+    display: flex;
+    justify-content: flex-end;
     position: relative;
 }

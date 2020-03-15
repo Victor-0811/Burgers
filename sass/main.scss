@@ -1,6 +1,7 @@
 @import "layout/_fonts.scss";
 @import "layout/_normalize.scss";
 @import "layout/_base.scss";
+@import "layout/_media.scss";
 @import "layout/_variables.scss";
 @import "layout/_mixins.scss";
 
@@ -21,3 +22,6 @@
 @import "blocks/delivery";
 @import "blocks/form";
 @import "blocks/map";
+@import "blocks/footer";
+@import "blocks/socials";
+@import "blocks/menu-btn";

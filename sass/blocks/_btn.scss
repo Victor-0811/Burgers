@@ -4,12 +4,34 @@
     text-transform: uppercase;
     color: #fff;
     background-color: #e45028;
-    padding: 10px 16px;
-    border-radius: 5px;
-    margin-left: 20px;
+    padding: rem(10px) rem(16px);
+    border-radius: rem(5px);
+    margin-left: rem(20px);
+
+    @include tablets {
+        margin-left: auto;
+    }
+
+    @include phones {
+        padding: rem(7px) rem(13px);
+    }
 
     &--reviews {
         background-color: #2f3234;
         margin-left: 0;
+
+        @include tablets {
+            display: block;
+            margin: 0 auto;
+        }
     }
+
+    &--form {
+        margin: 0 3% 0 0;
+    }
+}
+
+.btn__reset {
+    color: #fff;
+    display: block;
 }

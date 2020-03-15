@@ -1,44 +1,59 @@
 .nav {
     margin-left: auto;
 
-    &__list {
-        @include flex-between;
+    @include tablets {
+        display: none;
+    }
+}
+
+.nav__list {
+    @include flex-between;
+}
+
+.nav__item {
+    margin-left: rem(15px);
+    @include flex-center;
+
+    &:first-child {
+        margin-left: 0;
     }
 
-    &__item {
-        margin-left: 15px;
-        @include flex-center;
+    &:after {
+        content: "";
+        display: inline-block;
+        width: rem(4px);
+        height: rem(4px);
+        border-radius: 50%;
+        background-color: #fff;
+        margin-left: rem(15px);
 
-        &:first-child {
-            margin-left: 0;
+        @include large {
+            margin-left: rem(7px);
         }
+    }
 
+    &--none {
         &:after {
-            content: "";
-            display: inline-block;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background-color: #fff;
-            margin-left: 15px;
-        }
-
-        &--none {
-            &:after {
-                display: none;
-            }
+            display: none;
         }
     }
 
-    &__link {
-        color: #fff;
-        font-size: px-to-rem(13px);
-        text-transform: uppercase;
-        line-height: 2.308;
-        font-family: 'ubuntu';
-        font-weight: 500;
-        position: relative;
-        display: block;
+    @include large {
+        margin-left: rem(7px);
+    }
+}
 
+.nav__link {
+    color: #fff;
+    font-size: rem(13px);
+    text-transform: uppercase;
+    line-height: 2.308;
+    font-family: 'ubuntu';
+    font-weight: 500;
+    position: relative;
+    display: block;
+
+    @include large {
+        font-size: rem(11px);
     }
 }
