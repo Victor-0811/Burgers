@@ -16,7 +16,7 @@
     }
 
     @include phones {
-        height: auto;
+        height: 25%;
         display: flex;
         justify-content: center;
     }

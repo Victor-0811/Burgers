@@ -1,10 +1,12 @@
 .menu-btn {
     width: rem(25px);
     height: rem(25px);
-    margin-left: 4%;
     position: relative;
     @include flex-center;
     display: none;
+    top: 10%;
+    right: 3%;
+    position: fixed;
 
     @include tablets {
         display: flex;

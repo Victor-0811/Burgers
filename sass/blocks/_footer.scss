@@ -1,6 +1,5 @@
 .footer {
     background: url("../images/footer-bg.jpg") center center / cover no-repeat;
-    padding: 0 16%;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -14,7 +13,7 @@
     }
 
     @include phones {
-        font-size: rem(10px);
+        font-size: rem(12px);
     }
 }
 
@@ -27,6 +26,10 @@
         flex-direction: column;
         text-align: center;
     }
+}
+
+.footer__contacts {
+    width: 50%;
 }
 
 .footer__link {

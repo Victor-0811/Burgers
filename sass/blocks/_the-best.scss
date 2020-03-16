@@ -33,11 +33,16 @@
     display: block;
     width: rem(100px);
     height: rem(100px);
+
+    @include phones {
+        margin: 0 3% 0 0;
+    }
 }
 
 .the-best__text {
     @include phones {
         flex: 1;
+        text-align: left;
     }
 }
 
@@ -70,6 +75,7 @@
 
     @include phones {
         font-size: rem(20px);
+        margin-bottom: 2%;
     }
 }
 

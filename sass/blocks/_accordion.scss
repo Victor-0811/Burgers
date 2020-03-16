@@ -1,87 +1,99 @@
 .accordion {
     color: #fff;
     padding: 0 4%;
+}
 
-    .accordion__trigger {
-        color: #fff;
-        font-weight: 400;
-        font-size: rem(14px);
-        margin-bottom: 4%;
-        position: relative;
-        display: inline-flex;
-        align-items: center;
+.accordion__item {
+    margin-bottom: rem(20px);
 
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            display: block;
-            border-left: rem(4px) solid transparent;
-            border-right: rem(4px) solid transparent;
-            border-top: rem(8px) solid #f9b43b;
-            margin-left: -18%
-        }
-
-    }
-
-    .accordion__active-block {
-        display: flex;
-        justify-content: space-between;
-        font-size: rem(14px);
-        font-family: 'ubuntu';
-        margin-bottom: rem(20px);
-        height: 0;
-        overflow: hidden;
-
-        @include tablets {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 0 22%;
-        }
-    }
-
-    .accordion__pic {
-        margin-right: rem(20px);
-
-        @include tablets {
-            margin: 0 0 3% 0;
-
-        }
-    }
-
-    .accordion__avatar {
-        width: rem(105px);
-        height: rem(105px);
-        border-radius: 50%;
-        overflow: hidden;
-
-    }
-
-    .accordion__img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .accordion__title {
-        font-weight: 700;
-        margin-bottom: rem(18px);
-    }
-
-    .accordion__descr {
-        font-weight: 300;
-        line-height: 1.714;
-        width: 64%;
-
-        @include tablets {
-            width: 100%;
-        }
+    &:last-child {
+        margin-bottom: 0;
     }
 }
+
+.accordion__trigger {
+    color: #fff;
+    font-weight: 400;
+    font-size: rem(14px);
+    margin-bottom: 4%;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        border-left: rem(4px) solid transparent;
+        border-right: rem(4px) solid transparent;
+        border-top: rem(8px) solid #f9b43b;
+        margin-left: -18%
+    }
+
+}
+
+.accordion__active-block {
+    display: flex;
+    justify-content: space-between;
+    font-size: rem(14px);
+    font-family: 'ubuntu';
+    height: 0;
+    overflow: hidden;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 22%;
+    }
+}
+
+.accordion__pic {
+    margin-right: rem(20px);
+
+    @include tablets {
+        margin: 0 0 3% 0;
+
+    }
+}
+
+.accordion__avatar {
+    width: rem(105px);
+    height: rem(105px);
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.accordion__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.accordion__title {
+    font-weight: 700;
+    margin-bottom: rem(18px);
+}
+
+.accordion__descr {
+    font-weight: 300;
+    line-height: 1.714;
+    width: 64%;
+
+    @include tablets {
+        width: 100%;
+    }
+
+    @include phones {
+        font-size: rem(13px);
+    }
+}
+
 
 .accordion__item--active .accordion__active-block {
     height: 100%;
@@ -119,6 +131,7 @@
     height: 100%;
     cursor: pointer;
     overflow: hidden;
+    margin: 0;
 }
 
 .accordion--horisontal .accordion__trigger {
@@ -126,6 +139,17 @@
     @include flex-center;
     width: rem(80px);
     margin-bottom: 0;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: hsla(204, 5%, 19%, 0.849);
+    }
 
     @include phones {
         width: rem(40px);
@@ -156,10 +180,12 @@
     margin: 0;
     white-space: nowrap;
     transform: rotate(-90deg);
+    position: absolute;
+    bottom: 5%;
     z-index: 9;
 
     @include phones {
-        font-size: px-to-rem(30px);
+        font-size: px-to-rem(25px);
     }
 }
 
@@ -192,7 +218,7 @@
 }
 
 .accordion--horisontal .accordion__item--active .accordion__active-block {
-    // width: rem(600px);
+    width: rem(400px);
     position: relative;
 
     @include phones {
