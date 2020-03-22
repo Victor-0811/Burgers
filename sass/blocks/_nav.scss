@@ -2,12 +2,28 @@
     margin-left: auto;
 
     @include tablets {
-        display: none;
+        position: fixed;
+        @include flex-center;
+        z-index: 99;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        bottom: 0;
+        background-color: rgb(48, 50, 52);
+        transition: .5s all;
     }
+}
+
+.nav--active {
+    right: 0;
 }
 
 .nav__list {
     @include flex-between;
+
+    @include tablets {
+        @include flex-column;
+    }
 }
 
 .nav__item {
@@ -30,6 +46,10 @@
         @include large {
             margin-left: rem(7px);
         }
+
+        @include tablets {
+            margin: rem(10px) 0 0 0;
+        }
     }
 
     &--none {
@@ -40,6 +60,15 @@
 
     @include large {
         margin-left: rem(7px);
+    }
+
+    @include tablets {
+        @include flex-column;
+        margin: 0 0 rem(15px) 0;
+
+        &:last-child {
+            margin: 0;
+        }
     }
 }
 
@@ -55,5 +84,9 @@
 
     @include large {
         font-size: rem(11px);
+    }
+
+    @include tablets {
+        font-size: rem(14px);
     }
 }

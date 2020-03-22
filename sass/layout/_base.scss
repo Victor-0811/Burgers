@@ -47,7 +47,9 @@ body {
 .wrapper {
     overflow: hidden;
     min-height: 100%;
+    position: relative;
 }
+
 
 .container {
     max-width: 960px;

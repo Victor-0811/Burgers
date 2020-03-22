@@ -49,5 +49,28 @@
         }
     }
 
+    &--white {
+        color: #fff;
+        margin: 0 0 rem(40px)0;
 
+        @include tablets {
+            font-size: px-to-rem(60px);
+            margin: 0 0 rem(20px)0;
+        }
+
+        @include phones {
+            font-size: px-to-rem(45px);
+        }
+    }
+
+
+}
+
+
+.no-scroll {
+    overflow: hidden;
+
+    @include tablets {
+        overflow: hidden;
+    }
 }

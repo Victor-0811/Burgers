@@ -1,0 +1,62 @@
+.composition {
+    width: 90px;
+    height: 90px;
+    @include flex-center;
+    @include flex-column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: Gagalin;
+    color: #ffffff;
+    font-size: 13.92px;
+    font-weight: 400;
+
+    &:hover {
+        background-color: #e35028;
+    }
+
+    @include phones {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.composition__icon {
+    margin: 0 0 rem(3px)0;
+}
+
+.composition__products-drop-down {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 250px;
+    background: #fef8ec;
+    font-family: Ubuntu;
+    font-weight: 500;
+    color: #464848;
+    border-radius: 5px;
+    left: -9999px;
+
+    @include phones {
+        width: 200px;
+    }
+}
+
+.composition:hover .composition__products-drop-down {
+    left: 100%;
+}
+
+.composition__list {
+    padding: rem(8px);
+}
+
+.composition__item {
+    @include flex-around;
+    margin: 0 0 rem(13px)0;
+
+    &:last-child {
+        margin: 0;
+    }
+}

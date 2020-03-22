@@ -1,0 +1,29 @@
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: rgb(48, 50, 52);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal__block {
+    @include flex-column;
+    padding: 3%;
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+.modal__title {
+    font-family: 'ubuntu';
+    font-size: rem(14px);
+    font-weight: 300;
+    color: #5a5c5d;
+    margin-bottom: rem(10px);
+}

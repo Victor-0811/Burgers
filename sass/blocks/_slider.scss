@@ -1,0 +1,130 @@
+.slider {
+    width: 100%;
+    position: absolute;
+    display: flex;
+
+    @include tablets {
+        width: 80%;
+    }
+}
+
+.slider__list {
+    display: flex;
+    @include flex-center;
+
+    @include tablets {
+        padding: 0 11%;
+    }
+
+    @include phones {
+        padding: 0 2%;
+    }
+}
+
+
+.slider__item {
+    @include flex-center;
+    position: relative;
+    padding: 5% 0;
+
+    @include tablets {
+        @include flex-column;
+        text-align: center;
+        padding: 13% 0;
+    }
+}
+
+.slider__pic {
+    flex: 1;
+    margin: 0 rem(20px)0 0;
+
+    @include tablets {
+        width: 70%;
+        margin: 0;
+    }
+
+    @include phones {
+        padding: 0;
+        width: 70%;
+    }
+}
+
+.slider__text {
+    flex: 1;
+}
+
+.slider__descr p {
+    font-size: rem(14px);
+    font-family: 'ubuntu';
+    font-weight: 300;
+    color: #fff;
+    line-height: rem(24px);
+    margin: 0 0 rem(20px)0;
+
+    @include tablets {
+        font-size: rem(13px);
+        line-height: rem(20px);
+    }
+}
+
+.slider__order {
+    font-family: 'gagalin';
+    font-weight: 400;
+    line-height: .9;
+    color: #e35028;
+    display: flex;
+    align-items: flex-end;
+
+    @include tablets {
+        justify-content: center;
+    }
+}
+
+.slider__price {
+    margin: 0 rem(20px)0 0;
+}
+
+.slider__count {
+    font-size: rem(72px);
+
+    @include phones {
+        font-size: rem(50px);
+    }
+}
+
+.slider__wallet {
+    font-size: rem(30px);
+
+    @include phones {
+        font-size: rem(15px);
+    }
+}
+
+.slider__page {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    width: 100%;
+}
+
+.slider__page-left {
+    position: absolute;
+    display: block;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    width: 18px;
+    height: 18px;
+    transform: rotate(45deg);
+    left: -12px;
+}
+
+.slider__page-right {
+    position: absolute;
+    display: block;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    width: 18px;
+    height: 18px;
+    transform: rotate(-135deg);
+    right: -12px;
+}

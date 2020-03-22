@@ -1,0 +1,8 @@
+.burgers {
+    background: linear-gradient(to bottom, #f9b33b 0%, #f2a23a 27%, #f19e39 64%, #ef9739 82%, #f9b33b 100%);
+    @include flex-center;
+}
+
+.burgers .container {
+    @include flex-center;
+}

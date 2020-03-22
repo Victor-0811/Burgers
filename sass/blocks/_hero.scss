@@ -18,15 +18,21 @@
     }
 
     @include phones {
-        padding: 0;
+        padding: 0 4%;
     }
 }
 
 .hero__item {
     width: 50%;
+    max-width: 100%;
+    flex-shrink: 0;
 
     @include tablets {
         margin: 0 0 5% 0;
+    }
+
+    @include phones {
+        max-width: 70%;
     }
 }
 

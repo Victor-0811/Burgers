@@ -16,7 +16,7 @@
 }
 
 .the-best__item {
-    flex: 33.3333%;
+    flex: 1;
     flex-wrap: wrap;
     padding: .4%;
     @include flex-column;
@@ -75,7 +75,7 @@
 
     @include phones {
         font-size: rem(20px);
-        margin-bottom: 2%;
+        margin-bottom: 1%;
     }
 }
 
@@ -87,5 +87,15 @@
 
     @include phones {
         font-size: rem(13px);
+        line-height: 1.4;
     }
 }
+
+
+// .no-scroll {
+
+//     @include tablets {
+//         overflow: hidden;
+//         height: 100%;
+//     }
+// }

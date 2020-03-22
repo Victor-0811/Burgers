@@ -2,14 +2,21 @@
     width: rem(25px);
     height: rem(25px);
     position: relative;
+    display: block;
     @include flex-center;
     display: none;
-    top: 9%;
-    right: 3%;
+    top: 32px;
+    right: 20px;
     position: fixed;
+    z-index: 999;
 
     @include tablets {
         display: flex;
+        top: 31px;
+    }
+
+    @include phones {
+        top: 26px;
     }
 }
 
@@ -26,6 +33,8 @@
 .menu-btn__line:before,
 .menu-btn__line:after {
     content: "";
+    display: block;
+    transition: .4s;
 }
 
 .menu-btn__line:before {
@@ -34,4 +43,16 @@
 
 .menu-btn__line::after {
     transform: translateY(7px);
+}
+
+.menu-btn--active .menu-btn__line {
+    height: 0;
+}
+
+.menu-btn--active .menu-btn__line:before {
+    transform: rotate(45deg);
+}
+
+.menu-btn--active .menu-btn__line:after {
+    transform: rotate(-45deg);
 }

@@ -30,6 +30,22 @@
 
 .footer__contacts {
     width: 50%;
+
+    @include phones {
+        width: 100%;
+    }
+}
+
+
+.footer__socials {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include phones {
+        justify-content: center;
+    }
 }
 
 .footer__link {
@@ -38,13 +54,7 @@
 }
 
 .footer__address {
-    margin-bottom: 2%;
-}
-
-.footer__socials {
-    border: rem(2px) solid #fff;
-    width: rem(200px);
-    height: rem(50px);
+    margin-bottom: rem(3px);
 }
 
 .phone {
